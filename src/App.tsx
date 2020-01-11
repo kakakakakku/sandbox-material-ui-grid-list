@@ -5,6 +5,7 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
+import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 
@@ -40,6 +41,9 @@ const App: React.FC = () => {
   return (
     <div className={classes.root}>
       <GridList cellHeight={200} className={classes.gridList} cols={3}>
+        <GridListTile key="Subheader" cols={3} style={{ height: 'auto' }}>
+          <ListSubheader component="div">2018</ListSubheader>
+        </GridListTile>
         <GridListTile key="cat" cols="2">
           <img src={cat} alt="cat" />
           <GridListTileBar
@@ -61,6 +65,9 @@ const App: React.FC = () => {
         </GridListTile>
         <GridListTile key="pelikan" cols="1">
           <img src={pelikan} alt="pelikan" />
+        </GridListTile>
+        <GridListTile key="Subheader" cols={3} style={{ height: 'auto' }}>
+          <ListSubheader component="div">2019</ListSubheader>
         </GridListTile>
         <GridListTile key="rabbit" cols="1">
           <img src={rabbit} alt="rabbit" />
